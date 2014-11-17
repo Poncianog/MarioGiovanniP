@@ -1,14 +1,14 @@
 // TODO
 game.PlayerEntity = me.Entity.extend({
     init: function(x, y, settings){
-        this_super(me.Entity, 'init', [x, y, {
+        this._super(me.Entity, 'init', [x, y, {
                 image: "mario",
                 spritewidth: "128",
                 spriteheight: "128",
                 width: 128,
                 height: 128,
                 getShape: function(){
-                    return (new me.Rect(0, 0, 128, 128)).toPloygon();
+                    return (new me.Rect(0, 0, 128, 128)).toPolygon();
                 }
         }]);
     
@@ -29,14 +29,18 @@ game.PlayerEntity = me.Entity.extend({
        }
        
        if(this.body.vel.x !== 0){
+            if (!this.renderable.isCurrentAnimation("smallWalk")) {
                 this.renderable.setCurrentAnimation("smallWalk");
+                this.renderable.setAnimationFrame();
+            }
             }else{
                  this.renderable.setCurrentAnimation("idle");
-            }
+            
         }
         
-        this.body.update(delta);
+        this.body.update(delta); 
         this._super(me.Entity, "update", [delta]);
         return true;
     }
-    });
+    
+  });
