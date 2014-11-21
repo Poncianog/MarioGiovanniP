@@ -40,12 +40,12 @@ game.PlayerEntity = me.Entity.extend({
                  this.renderable.setCurrentAnimation("idle");
             
         }
-        
+                
         this._super(me.Entity, "update", [delta]);
         return true;
     },
     
-    collideHndler: function(response){
+    collideHandler: function(response){
         
     }
     
