@@ -18,7 +18,7 @@ game.PlayerEntity = me.Entity.extend({
         this.renderable.setCurrentAnimation("idle");
         
         this.body.setVelocity(5, 20);
-        me.game.viewport.follow(this.pos, me.viewport.AXIS.BOTH);
+//        me.game.viewport.follow(this.pos, me.viewport.AXIS.BOTH);
     },
     
     update: function(delta){
