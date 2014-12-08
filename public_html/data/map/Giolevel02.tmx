@@ -33,5 +33,4 @@
   <object name="BadGuy" x="1194" y="486" width="764" height="72"/>
   <object name="BadGuy" x="1680" y="488" width="492" height="72"/>
  </objectgroup>
- <objectgroup name="Object Layer 2"/>
 </map>

@@ -94,7 +94,12 @@ game.PlayerEntity = me.Entity.extend({
                 }
         }]);
     
-        
+        this.spritewidth = 60;
+        x = this.pos.x;
+        this.startX = x;
+        this.endX = x + width - this.spritewidth;
+        this.pos.x = x + width - this.spritewidth;
+        this.updateBounds();
     
       },
       
