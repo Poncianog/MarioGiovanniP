@@ -8,6 +8,7 @@ game.PlayScreen = me.ScreenObject.extend({
                 
                 me.levelDirector.loadLevel("Giolevel01");
                 
+                
                 this.resetPlayer(0, 400);
                 
                 me.input.bindKey(me.input.KEY.RIGHT, "right");
